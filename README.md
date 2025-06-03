@@ -12,8 +12,6 @@ Esta es una plataforma web desarrollada como parte de un reto técnico. Permite 
 - Interfaz moderna con carga dinámica y manejo de errores.
 - Visualización de detalles y cambio porcentual por acción.
 - Carga progresiva (paginación).
-- Pruebas unitarias para backend y frontend.
-- Infraestructura como código (opcional con Terraform).
 
 ---
 
@@ -30,13 +28,13 @@ cd proyecto
 
 ```bash
 cd backend
-go run main.go
+go run cmd/api/main.go
 ```
 
 Variables necesarias en `.env`:
 
 ```
-API_KEY=tu_clave
+API_TOKEN=tu_clave
 DB_URL=tu_conexion
 PORT=8080
 ```
@@ -48,30 +46,6 @@ cd frontend
 npm install
 npm run dev
 ```
-
-### 4. Despliegue con Terraform (opcional)
-
-```bash
-cd infrastructure
-terraform init
-terraform apply
-```
-
----
-
-## 🧪 Pruebas
-
-```bash
-# Backend
-cd backend
-go test ./...
-
-# Frontend
-cd frontend
-npm run test
-```
-
----
 
 ## 📁 Estructura del Proyecto
 
